@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Sound</title>
+    <style>
+        body {
+            background-image: url('wallhaven-0j7jpp.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff; 
+            height: 100vh; 
+            margin: 0; /
+        }
+        
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to My Sound Webpage</h1>
+        <p>Enjoy the background sound while browsing!</p>
+
+        <button onclick="playSound()">Play Sound</button>
+
+        <audio id="bgSound" loop>
+            <source src="lofi music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- JavaScript to handle the sound -->
+    <script>
+        function playSound() {
+            const audio = document.getElementById('bgSound');
+            audio.play(); // Start playing the sound
+        }
+    </script>
+</body>
+</html>
